@@ -16,3 +16,16 @@ for (let n = 0; n < 3; n += 1) { // 3자리 뽑을때까지 반복
   numbers.splice(index, 1); 
 }
 console.log(answer); // console로 답 확인
+
+// input number check
+const chances = [];
+function checkInput(input) {
+  if (new Set(input).size !== 3) { // new Set으로 중복된 input값 거르기
+    return alert('중복된 숫자가 있습니다.');
+  } 
+  if (chances.includes(input)){ // 시도한 배열에 이미 시도한 값이 들어있는것 거르기
+    return alert('이미 시도한 값입니다.');
+  }
+  return true; 
+}
+
