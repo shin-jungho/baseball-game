@@ -67,3 +67,21 @@ formTag.addEventListener('submit', (e) => {
       logsTag.append(`${value} >> 스트라이크: ${strike} 볼: ${ball} `, document.createElement('br'));
     }
 });
+
+// 정답일 때 알람, 재시작/종료
+function restartGame() {
+  alert('정답입니다!');
+  const el = prompt('게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.'); 
+  switch (el) {
+    case '1':
+      alert('게임을 재시작합니다.')
+      location.reload()
+      break;
+    case '2':
+      alert('게임을 종료합니다.');
+      break;
+    default:
+      alert('숫자 1, 2를 입력해주세요.')
+      restartNumber();
+  }
+}
